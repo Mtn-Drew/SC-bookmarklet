@@ -1,25 +1,25 @@
-const drewMagic = document.createElement('div');
+const stampMagic = document.createElement('div');
 const dMHeader = document.createElement('div');
 const dMIframe = document.createElement('iframe');
 const minBtn = document.createElement('button');
 const closeBtn = document.createElement('button');
 const btnDiv = document.createElement('div');
 
-drewMagic.setAttribute('id', 'drew-magic');
+stampMagic.setAttribute('id', 'drew-magic');
 dMHeader.setAttribute('id', 'DMHeader');
 minBtn.setAttribute('id', 'minBtn');
 closeBtn.setAttribute('id', 'closeBtn');
 
-drewMagic.style.position = 'absolute';
-drewMagic.style.zIndex = '10000';
-drewMagic.style.backgroundColor = '#f1f1f1';
-drewMagic.style.border = 'solid black 1px';
-drewMagic.style.textAlign = 'center';
-drewMagic.style.resize = 'both';
-drewMagic.style.overflow = 'hidden';
-drewMagic.style.width = '450px';
-drewMagic.style.height = '840px';
-drewMagic.style.boxShadow = 'firebrick 0px 0px 6px 0px';
+stampMagic.style.position = 'absolute';
+stampMagic.style.zIndex = '10000';
+stampMagic.style.backgroundColor = '#f1f1f1';
+stampMagic.style.border = 'solid black 1px';
+stampMagic.style.textAlign = 'center';
+stampMagic.style.resize = 'both';
+stampMagic.style.overflow = 'hidden';
+stampMagic.style.width = '450px';
+stampMagic.style.height = '840px';
+stampMagic.style.boxShadow = 'firebrick 0px 0px 6px 0px';
 
 dMHeader.style.padding = '12px';
 dMHeader.style.cursor = 'move';
@@ -39,17 +39,17 @@ closeBtn.style.right = '0';
 minBtn.style.width = '24px';
 minBtn.style.height = '22px';
 
-drewMagic.appendChild(dMHeader);
-drewMagic.appendChild(dMIframe);
+stampMagic.appendChild(dMHeader);
+stampMagic.appendChild(dMIframe);
 dMHeader.appendChild(btnDiv);
 btnDiv.appendChild(minBtn);
 btnDiv.appendChild(closeBtn);
 
-document.body.insertBefore(drewMagic, document.body.firstChild);
+document.body.insertBefore(stampMagic, document.body.firstChild);
 
 dMIframe.setAttribute('src', 'https://stamp-champ.mtndrew.now.sh/stamps/');
 
-dragElement(drewMagic);
+dragElement(stampMagic);
 
 function dragElement(el) {
   let pos1 = 0,
@@ -90,7 +90,7 @@ function dragElement(el) {
 }
 
 closeBtn.addEventListener('click', () => {
-  drewMagic.remove();
+  stampMagic.remove();
 });
 document.getElementById('minBtn').addEventListener('click', () => {
   if (document.getElementById('minBtn').innerText === '-') {
